@@ -1,0 +1,1281 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>MonPetitBrasseur</title>
+    </head>
+    <body>
+        <style>
+            .logofb{
+                display: inline;
+                height: 55px;
+                width : 55px;
+                border-radius: 10px;
+            }
+            .logoinsta{
+                display: inline;
+                height: 50px;
+                width : 50px;
+                border-radius: 10px;
+            }
+            .logosnap{
+                display: inline;
+                height: 50px;
+                width : 50px;
+                border-radius: 10px;
+            }
+            .baar{
+                display : flex;
+                flex-flow: row wrap;
+                background-image: url(https://www.anousparis.fr/app/uploads/2017/12/12622477_1065947983464352_8222817283722989567_o-1-e1514383305378.jpg);
+                background-size: 100% 500px;
+            }
+            button{
+                flex-grow: 50;
+                background-color: white;
+                border-top: 1px solid gold;
+                border-right: none;
+                border-left: none;
+                border-bottom: none;
+                font-family: 'Courier New', Courier, monospace;
+                font-weight: 800;
+                color: gold ;
+                height: 40px;
+                cursor: pointer;
+            }
+            button:nth-child(1){
+                border-right: 1px solid gold;
+                border-bottom-left-radius: 20px;
+            }
+            button:nth-child(2){
+                border-right: 1px solid gold;
+            }
+            button:nth-child(4){
+                border-left: 1px solid gold;
+                border-bottom-right-radius: 20px;
+            }
+            button:hover{
+                background-color: yellow;
+            }
+            button:focus{
+                outline: none;
+            }
+            h1{
+                text-align: center;
+            }
+            body{
+                margin:0px;
+                padding: 0px;
+            }
+            #contenu1{
+                display: flex;
+                flex-flow: column wrap;
+                background-color : white;
+                max-width: 1000px;
+                margin-left : 50px;
+                margin-right : 50px;
+                margin-top : 50px;
+                margin-bottom : 50px;
+                border-radius: 20px;
+            }
+            #contenu2{
+                display: flex;
+                flex-flow: column wrap;
+                background-color : white;
+                max-width: 1000px;
+                margin-left : 50px;
+                margin-right : 50px;
+                margin-top : 50px;
+                margin-bottom : 50px;
+                border-radius: 20px;
+            }
+            #contenu3{
+                display: flex;
+                flex-flow: column wrap;
+                background-color : white;
+                max-width: 1000px;
+                margin-left : 50px;
+                margin-right : 50px;
+                margin-top : 50px;
+                margin-bottom : 50px;
+                border-radius: 20px;
+            }
+            #contenu4{
+                display: flex;
+                flex-flow: column wrap;
+                background-color : white;
+                max-width: 1000px;
+                min-width: 500px;
+                margin-left : 50px;
+                margin-right : 50px;
+                margin-top : 50px;
+                margin-bottom : 50px;
+                border-radius: 20px;
+            }
+            #contenu5{
+                display: flex;
+                flex-flow: column wrap;
+                background-color : white;
+                max-width: 1000px;
+                padding-left : 50px;
+                padding-right : 50px;
+                padding-top : 50px;
+                padding-bottom : 50px;
+                margin-left : 50px;
+                margin-right : 50px;
+                margin-top : 50px;
+                margin-bottom : 50px;
+                border-radius: 20px;
+            }
+            #contenu6{
+                display: flex;
+                flex-flow: column wrap;
+                background-color : white;
+                max-width: 1000px;
+                margin-left : 50px;
+                margin-right : 50px;
+                margin-top : 50px;
+                margin-bottom : 50px;
+                border-radius: 20px;
+            }
+            #contenu6 button{
+                align-content: center;
+            }
+            #contenu5 button{
+                border: none;
+                border-radius: 0px;
+            }
+            p{
+                margin-left: 20px;
+                margin-right: 20px;
+            }
+            h1{
+                padding-top : 50px;
+                padding-left: 20px;
+                padding-right: 20px;
+            }
+            #contenu1 h2:hover{
+                color: gold;
+                cursor: pointer;
+            }
+            main{
+                text-align: center;
+                display: flex;
+                flex-flow: column nowrap;
+                align-items: center;
+                justify-content: center;
+                margin : 0px;
+                min-height: 452px;
+                padding-top : 10px;
+                padding-bottom : 10px;
+                background-image: url(https://www.anousparis.fr/app/uploads/2017/12/12622477_1065947983464352_8222817283722989567_o-1-e1514383305378.jpg);
+                background-size: 100% 1310px;
+            }
+            main:nth-child(2){
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+            header{
+                display: flex;
+                flex-flow: column nowrap;
+                margin-top: 0px;
+                border-bottom-left-radius: 20px;
+                border-bottom-right-radius: 20px;
+            }
+            div:nth-child(1){
+                display: flex;
+                flex-flow: row nowrap;
+                flex-grow: 50;
+            }
+            img{
+                flex-grow: 50;
+            }
+            .Tailleimg1{
+                display: flex;
+                flex-flow: row nowrap;
+                height: 150px;
+                width: 130px;
+            }
+            .Tailleimg2{
+                text-align: center;
+                height: 150px;
+                max-height: 200px;
+                max-width: 200px;
+            }
+            footer{
+                display: flex;
+                flex-flow: row nowrap;
+                margin-top: 0px;
+                border-bottom-left-radius: 20px;
+                border-bottom-right-radius: 20px;
+            }
+            h1, h2, p, legend, label, input{
+                font-family: Georgia, 'Times New Roman', Times, serif;
+            }
+            .voircontour{
+                border: 3px solid black;
+            }
+            .voircontour2{
+                width: 60px;
+                height: 180px;
+                border: 1px solid black;
+            }
+            .prix{
+                color: red;
+            }
+            li{
+                text-align: start;
+            }
+            #butpan{
+                border: none;
+                background-color: gold;
+                color: white;
+            }
+            #butpan:hover{
+                color: black;
+            }
+            fieldset{
+                display: flex;
+                flex-flow: column nowrap;
+                padding-bottom: 20px;
+            }
+            fieldset div{
+                display: flex;
+                flex-flow: column nowrap;
+                justify-content: space-around;
+            }
+            #espacesform1{
+                padding-top: 30px;
+                padding-bottom: 15px;
+            }
+            #espacesform{
+                padding-bottom: 15px;
+            }
+            #espacessub{
+                padding-top: 30px;
+            }
+            #contenu2 div{
+                display: flex;
+                flex-flow: column nowrap;
+                align-items: center;
+                justify-content: center;
+            }
+            #contenu3 div{
+                display: flex;
+                flex-flow: column nowrap;
+                align-items: center;
+                justify-content: center;
+            }
+            th,td{
+                padding-left: 10px;
+                padding-right: 10px;
+                padding-top: 5px;
+                padding-bottom: 5px;
+            }
+            table,th,td{
+                border: 1px solid #333;
+            }
+            thead,tfoot{
+                background-color: #333;
+                color: #fff;
+            }
+            form{
+                padding-left: 100px;
+                padding-right: 100px;
+            }
+            #contenu3 #coût{
+                display: flex;
+                flex-direction: row;
+                justify-items: right;
+            }
+            #contenu3 button{
+                margin-left: 50px;
+                margin-right: 50px;
+            }
+            #butcom{
+                color: white;
+                background-color: rgb(41, 160, 41);
+                border: none;
+            }
+            #butcom:hover{
+                color: white;
+                background-color: rgb(27, 75, 27);
+            }
+            #butcom:disabled{
+                color: rgb(121, 100, 100);
+                background-color: rgb(85, 165, 85);
+                cursor: none;
+            }
+            #item{
+                padding-left: 30px;
+                padding-right: 30px;
+            }
+            #butcompte{
+                border: none;
+                border-bottom-right-radius: 0px;
+                color: red;
+            }
+            #butcompte:hover{
+                background-color: red;
+                color: white;
+            }
+            .imageCentre {
+                text-align: center;
+            }
+            .imageCentre a{
+                text-decoration: none;
+            }
+            #spé{
+                margin-top: 70px;
+                color: white;
+                background-color: rgb(78, 70, 70);
+                border: none;
+                border-bottom-left-radius: 0px;
+            }
+            #spé:hover{
+                background-color: black;
+            }
+            #qsn{
+                display: flex;
+                justify-content: center;
+            }
+            #qsn img{
+                position: relative;
+            }
+            #qsn button{
+                position: absolute;
+            }
+            #contenu6 a{
+                text-decoration: none;
+            }
+            .imgprofil{
+                width: 200px;
+            }
+        </style>
+        <header>
+            <div>
+                <img class="Tailleimg1" src="img/downloadfile.bin">
+                <img class="Tailleimg1" src="img/downloadfile.bin">
+                <img class="Tailleimg2" src="img/logoprojet.png">
+                <img class="Tailleimg1" src="img/downloadfile.bin">
+                <img class="Tailleimg1" src="img/downloadfile.bin">
+            </div>
+            
+            <div class="baar">
+                <button onclick="goto(0)">ACCUEIL</button>
+                <button onclick="goto(1)">LES BIERES DU MOMENT</button>
+                <button onclick="goto(2)">ACCES AU PANIER</button>
+                <button onclick="goto(3)">A VOUS DE JOUER</button>
+            </div>
+            
+        </header>
+        <main>
+            <div id="contenu1">
+                <h1>Bienvenue chez le petit Brasseur !</h1>
+                <h6>(L'abus d'alcool est dangereux pour la santé ! Consommez ce site avec modération !)</h6>
+                <br>
+                <p>Vous êtes vous déjà dit que vous vouliez voir le monde, voyager à travers les cultures, les saveurs ?</p>
+                <p>Eh bien figurez-vous que ce site vous permettra de réaliser vos rêves les plus fous !! Bienvenue dans le monde de la bière !!</p>
+                <p>Grâce à ses multiples fonctionnalités, ce site vous permettra de goûter les bières les plus savoureuses, insolites ou enivrantes du monde entier.</p>
+                <h1>Au Menu</h1>
+                <br>
+                <h2 onclick="goto(1)">Les bières du moment :</h2>
+                <p>Cet onglet vous permet de voir un top 10 des bières 
+                    réputées pour leur particularité dans le monde. Une image et une 
+                    description sur chacune d’entre elles, le prix et les avis des 
+                    autres utilisateurs. De plus, un bouton vous permettra 
+                    d’ajouter l’article pour pouvoir passer à la commande.</p>
+                <br>
+                <h2 onclick="goto(2)">Accès au panier :</h2>
+                <p>Vous pouvez, comme mentionné précédemment, ajouter la quantité 
+                    d’article que vous désirez pour faire partager vos découvertes à 
+                    tous vos proches et vous faire livrer n’importe où. La distance reste 
+                    le cadet de vos soucis pour que vous puissiez profiter au maximum. 
+                    La seule chose à faire est de s’inscrire 
+                    sur notre formulaire dans l'onglet "A vous de jouer" pour devenir membre et le tour est joué !!</p>
+                <br>
+                <h2 onclick="goto(3)">A vous de jouer :</h2>
+                <p>Un formulaire vous est présenté pour que vous puissiez devenir membre. En tant que membre, vous pourrez 
+                    bénéficier de plusieurs avantages car il vous sera possible de :
+                    <ul>
+                        <li>Partager et converser avec les autres membres</li>
+                        <li>Rester informé sur les nouveaux produits disponibles</li>
+                        <li>Bénéficier de plusieurs codes de réductions</li>
+                        <li>...et d'innombrables autres découvertes !!</li>
+                    </ul>
+                </p>
+                <br>
+                <p>Alors n’attendez pas et sautez sur l’occasion !!</p>
+                <br>
+                <br>
+            </div>
+            <div id="contenu2">
+                <h1>Top 10 des bières du moment</h1>
+                <br>
+                <div id="item1">
+                    <h2 id="titre">Orval</h2>
+                    <img src="img/orval.png">
+                    <p>L’Orval est une bière trappiste belge très reconnue. Avec 
+                        sa saveur complexe et épicée, l’Orval a une note de fond très sèche.</p>
+                    <br>
+                    <table>
+                        <tr>
+                            <th>Type</th>
+                            <th>Degrés (en %)</th>
+                            <th>Taille (en cl)</th>
+                            <th>Prix (en €)</th>
+                            <th>Note</th>
+                        </tr>
+                        <tr>
+                            <td>Bière Blonde</td>
+                            <td>6,2</td>
+                            <td>33</td>
+                            <td id="prix">2.79</td>
+                            <td>3.92/5.00</td>
+                        </tr>
+                    </table>
+                    <br>
+                    <br>
+                    <button onclick="quant(4,'titre','prix')">Ajouter au panier</button>
+                </div>
+                <hr>
+                <div id="item2">
+                    <h2 id="titre2">Rodenbach Grand Cru</h2>
+                    <img src="img/rodenbach-grand-cru.png">
+                    <p>Mélange de bière jeune et de bière vieillie en fût de chêne. Le 
+                        procédé de fermentation mixte engendre de fantastiques arômes de 
+                        fruits, de bois et de vanille, et les notes acidulées et fruitées 
+                        lui donnent un caractère proche du vin. La complexité 
+                        de cette Rodenbach Grand Cru amène un festival de saveurs à votre table.</p>
+                    <br>
+                    <table>
+                        <tr>
+                            <th>Type</th>
+                            <th>Degrés (en %)</th>
+                            <th>Taille (en cl)</th>
+                            <th>Prix (en €)</th>
+                            <th>Note</th>
+                        </tr>
+                        <tr>
+                            <td>Bière Sour</td>
+                            <td>6,0</td>
+                            <td>33</td>
+                            <td id="prix2">3.29</td>
+                            <td>4.05/5.00</td>
+                        </tr>
+                    </table>
+                    <br>
+                    <br>
+                    <button onclick="quant(4,'titre2','prix2')">Ajouter au panier</button>
+                </div>
+                <hr>
+                <div id="item3">
+                    <h2 id="titre3">Aventinus</h2>
+                    <img src="img/schneider-weisse-aventinus.png">
+                    <p>La puissante Weizenbock a une robe brun-rouge avec une mousse claire 
+                        dense et offre des arômes fruités de banane mûre et de prune. 
+                        Maintes fois récompensées, elle sera appréciée à toutes les tables.</p>
+                    <br>
+                    <table>
+                        <tr>
+                            <th>Type</th>
+                            <th>Degrés (en %)</th>
+                            <th>Taille (en cl)</th>
+                            <th>Prix (en €)</th>
+                            <th>Note</th>
+                        </tr>
+                        <tr>
+                            <td>Bière Bock</td>
+                            <td>8,2</td>
+                            <td>50</td>
+                            <td id="prix3">3.09</td>
+                            <td>3.93/5.00</td>
+                        </tr>
+                    </table>
+                    <br>
+                    <br>
+                    <button onclick="quant(4,'titre3','prix3')">Ajouter au panier</button>
+                </div>
+                <hr>
+                <div id="item4">
+                    <h2 id="titre4">Montbéliarde Triple</h2>
+                    <img src="img/la-rouget-de-lisle-montbeliarde.png">
+                    <p>Bière blonde douce aux arômes fruités d’abricot et de pêche. 
+                        Elle offre également un arôme floral avec une touche de miel.</p>
+                    <br>
+                    <table>
+                        <tr>
+                            <th>Type</th>
+                            <th>Degrés (en %)</th>
+                            <th>Taille (en cl)</th>
+                            <th>Prix (en €)</th>
+                            <th>Note</th>
+                        </tr>
+                        <tr>
+                            <td>Bière de Garde & Saison</td>
+                            <td>9,0</td>
+                            <td>33</td>
+                            <td id="prix4">2.99</td>
+                            <td>3.17/5.00</td>
+                        </tr>
+                    </table>
+                    <br>
+                    <br>
+                    <button onclick="quant(4,'titre4','prix4')">Ajouter au panier</button>
+                </div>
+                <hr>
+                <div id="item5">
+                    <h2 id="titre5">Baladin Nora</h2>
+                    <img src="img/baladin---nora_v2.png">
+                    <p>Une bière originale à la couleur orangée avec du Kamut, une ancienne graine 
+                        d'Egypte,du gingembre et de la myrrhe. Les épices ont le rôle principal.</p>
+                    <br>
+                    <table>
+                        <tr>
+                            <th>Type</th>
+                            <th>Degrés (en %)</th>
+                            <th>Taille (en cl)</th>
+                            <th>Prix (en €)</th>
+                            <th>Note</th>
+                        </tr>
+                        <tr>
+                            <td>Bière Blonde</td>
+                            <td>6,8</td>
+                            <td>33</td>
+                            <td id="prix5">3.49</td>
+                            <td>3.63/5.00</td>
+                        </tr>
+                    </table>
+                    <br>
+                    <br>
+                    <button onclick="quant(4,'titre5','prix5')">Ajouter au panier</button>
+                </div>
+                <hr>
+                <div id="item6">
+                    <h2 id="titre6">Rogue Hazelnut</h2>
+                    <img src="img/rogue-hazelnut-brown-nectar.png">
+                    <p>Au nez, on perçoit directement des arômes de chocolat et de noisette, qu’on retrouve par
+                        la suite également en bouche. Cette bière est crémeuse et ronde, légèrement amère en final.</p>
+                    <br>
+                    <table>
+                        <tr>
+                            <th>Type</th>
+                            <th>Degrés (en %)</th>
+                            <th>Taille (en cl)</th>
+                            <th>Prix (en €)</th>
+                            <th>Note</th>
+                        </tr>
+                        <tr>
+                            <td>Bière Brune</td>
+                            <td>5,6</td>
+                            <td>33</td>
+                            <td id="prix6">2.99</td>
+                            <td>3.83/5.00</td>
+                        </tr>
+                    </table>
+                    <br>
+                    <br>
+                    <button onclick="quant(4,'titre6','prix6')">Ajouter au panier</button>
+                </div>
+                <hr>
+                <div id="item7">
+                    <h2 id="titre7">Wolfscrat das helle</h2>
+                    <img src="img/wolfscraft-das-helle.png">
+                    <p>Une bière fraîche et fruitée assez désaltérante. Des arômes d'agrumes et de fruits tropicaux.
+                        Le goût très frais reste longtemps en bouche.</p>
+                    <br>
+                    <table>
+                        <tr>
+                            <th>Type</th>
+                            <th>Degrés (en %)</th>
+                            <th>Taille (en cl)</th>
+                            <th>Prix (en €)</th>
+                            <th>Note</th>
+                        </tr>
+                        <tr>
+                            <td>Lager</td>
+                            <td>4,9</td>
+                            <td>33</td>
+                            <td id="prix7">2.89</td>
+                            <td>3.62/5.00</td>
+                        </tr>
+                    </table>
+                    <br>
+                    <br>
+                    <button onclick="quant(4,'titre7','prix7')">Ajouter au panier</button>
+                </div>
+                <hr>
+                <div id="item8">
+                    <h2 id="titre8">Triple sercret des moines</h2>
+                    <img src="img/triple-secret-des-moines-brune .png">
+                    <p>Une bière brune faible en alcool avec un caractère doux. 
+                        Des arômes de malts torréfiés, de chocolat et de fruits secs.</p>
+                    <br>
+                    <table>
+                        <tr>
+                            <th>Type</th>
+                            <th>Degrés (en %)</th>
+                            <th>Taille (en cl)</th>
+                            <th>Prix (en €)</th>
+                            <th>Note</th>
+                        </tr>
+                        <tr>
+                            <td>Bière Brune</td>
+                            <td>8,0</td>
+                            <td>33</td>
+                            <td id="prix8">2.85</td>
+                            <td>3.13/5.00</td>
+                        </tr>
+                    </table>
+                    <br>
+                    <br>
+                    <button onclick="quant(4,'titre8','prix8')">Ajouter au panier</button>
+                </div>
+                <hr>
+                <div id="item9">
+                    <h2 id="titre9">Kirin Ichiban</h2>
+                    <img src="img/kirin-ichiban.png">
+                    <p>Bière à la robe doré clair avec une mousse blanche dense, 
+                        aux notes maltées légères avec une touche de fruits frais. Très désaltérante.</p>
+                    <br>
+                    <table>
+                        <tr>
+                            <th>Type</th>
+                            <th>Degrés (en %)</th>
+                            <th>Taille (en cl)</th>
+                            <th>Prix (en €)</th>
+                            <th>Note</th>
+                        </tr>
+                        <tr>
+                            <td>Lager</td>
+                            <td>5,0</td>
+                            <td>33</td>
+                            <td id="prix9">2.49</td>
+                            <td>3.10/5.00</td>
+                        </tr>
+                    </table>
+                    <br>
+                    <br>
+                    <button onclick="quant(4,'titre9','prix9')">Ajouter au panier</button>
+                </div>
+                <hr>
+                <div id="item10">
+                    <h2 id="titre10">Augustijn</h2>
+                    <img src="img/augustijn-blond.png">
+                    <p>Robe dorée avec une belle mousse blanche. Au nez, ce sont le malt,
+                        les fruits et la levure qui s'imposent. Le goût est fruité et moyennement amer.</p>
+                    <br>
+                    <table>
+                        <tr>
+                            <th>Type</th>
+                            <th>Degrés (en %)</th>
+                            <th>Taille (en cl)</th>
+                            <th>Prix (en €)</th>
+                            <th>Note</th>
+                        </tr>
+                        <tr>
+                            <td>Lager</td>
+                            <td>7,0</td>
+                            <td>33</td>
+                            <td id="prix10">2.39</td>
+                            <td>3.52/5.00</td>
+                        </tr>
+                    </table>
+                    <br>
+                    <br>
+                    <button onclick="quant(4,'titre10','prix10')">Ajouter au panier</button>
+                </div>
+                <br>
+                <br>
+            </div>
+            <div id="contenu3">
+                <h1>Accès au panier</h1>
+                <br>
+                <p>Choisir un utilisateur :</p>
+                <div>
+                    <select name="selection" id="user_selection">
+                    </select>
+                </div>
+                <br>
+                <p>Votre commande actuelle :</p>
+                <br>
+                <br>
+                <div id="item">
+                    <table id="tableadd">
+                        <thead>
+                            <tr>
+                                <th>Nom</th>
+                                <th>Quantité</th>
+                                <th>Prix (en €)</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                        </tbody>
+                    </table>
+                </div>
+                <br>
+                <br>
+                <div id="coût">
+                    <p><strong>Total : </strong></p>
+                    <p id="coutotal">0</p>
+                    <p>€</p>
+                </div>
+                <br>
+                <br>
+                <button id="butpan" onclick="goto(1)">Remplir le panier</button>
+                <br>
+                <br>
+                <button id="butpan" onclick="affichersup()">Supprimer des éléments</button>
+                <div id="supr">
+                    <br>
+                    <br>
+                    <label for="supelem">Quel élément faut-il supprimer ?</label>
+                    <select id="supselect"></select>
+                    <input type="button" value="Supprimer" id="supression">
+                    <input type="button" value="Annuler" onclick="anulsupr()">
+                </div>
+                <br>
+                <p>ou</p>
+                <button id="butcom" onclick="ajoutcom()">Valider la commande</button>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+            </div>
+            <div id="contenu4">
+                <h1>A vous de jouer</h1>
+                <form id="formulaire" action="">
+                    <fieldset>
+                        <legend>S'inscrire</legend>
+                        <div id="espacesform1">
+                            <label for="user_name">Prénom : </label>
+                            <input name="prénom" type="text" id="user_name" placeholder="Monpetit" required>
+                        </div>
+                        <div id="espacesform">
+                            <label for="user_surname">Nom : </label>
+                            <input name="nom" type="text" id="user_surname" placeholder="Brasseur" required>
+                        </div>
+                        <div id="espacesform">
+                            <label for="user_date">Date de naissance : </label>
+                            <input name="date" type="date" id="user_date" required>
+                        </div>
+                        <div id="espacesform">
+                            <label for="user_mail">E-mail : </label>
+                            <input name="mail" type="email" id="user_mail" placeholder="mpb@gmail.com" required>
+                        </div>
+                        <div id="espacesform">
+                            <label for="user_num">Numéro (facultatif) : </label>
+                            <input name="numéro" type="tel" id="user_num" placeholder="+33*********">
+                        </div>
+                        <div id="espacessub">
+                            <input type="reset" onclick="enregistrerform()" value="Soumettre">
+                            <br>
+                            <input type="reset" value="Annuler">
+                        </div>
+                    </fieldset>
+                </form>
+                <br>
+                <button id="butcompte" onclick="affichercompte()">Supprimer un compte</button>
+                <div id="supcompte">
+                    <br>
+                    <br>
+                    <label>Quel compte supprimer ?</label>
+                    <input type="text" id="cptasupprimer">
+                    <input type="button" value="Supprimer" id="supcpt">
+                    <input type="button" value="Annuler" onclick="anulcpt()">
+                </div>
+                <br>
+                <br>
+                <div id="commandes">
+                    <br>
+                    <p id="listecmd">Liste des commandes :</p>
+                    <br>
+                    <table id="ajoutcom">
+                        <tbody>
+                        </tbody>
+                    </table>
+                </div>
+                <br>
+                <br>
+            </div>
+            <div id="contenu5">
+                <label for="quant">Quantité :</label>
+                <input type="number" id="quant" name="Quantité" required>
+                <input type="button" id="valider" value="OK !">
+                <input type="button" value="Annuler" onclick="clearinput()">
+            </div>
+            <div id="contenu6">
+                <br>
+                <br>
+                <h2>Qui sommes nous ?</h2>
+                <br>
+                <br>
+                <img class="imgprofil" src="img/36fea6de-99b5-4c20-919b-f60ae9c09e66.jpg">
+                <br>
+                <p>Bonjour ! Je suis Quentin de Mon Petit Brasseur. Tout au long du développement de notre site, 
+                    j'ai pu me consacrer à la réalisation des différentes interfaces du site comme la création du panier, 
+                    la création des comptes utilisateurs et la mise en place des commandes. N'hésitez pas à me constacter sur Facebook
+                    ou Instagram si vous avez la moindre question ou si vous rencontrez un problème.</p>
+                <p><strong>Suivre :</strong></p>
+                <a href="https://www.facebook.com/profile.php?id=100007631749436"> 
+                    <img class="logofb" src="img/d9dc614c-43ff-40db-b492-38e489afdd7e.jpg" alt="logo facebook">
+                </a>
+                <a href="https://www.instagram.com/k_lamb02/?hl=fr">
+                    <img class="logoinsta" src="img/d2e137d5-ac9d-462d-b8b7-bcc132eb449c.jpg" alt="logo instagram">
+
+                </a>
+                <br>
+                <br>
+                <hr>
+                <br>
+                <br>
+                <img class="imgprofil" src="img/photoperso.PNG">
+                <br>
+                <p>Bonjour ! Je suis Léo de Mon Petit Brasseur. Mon rôle dans la création de ce site web a été le design et la conception de la page d'accueil,
+                     de l'interface de choix des différentes bières proposées ainsi que le design général du site.
+                     Contactez moi via Facebook ou Instagram pour toute question ou problème rencontré.</p>
+                <p><strong>Suivre :</strong></p>
+                <a href="https://www.facebook.com/profile.php?id=100010002663777"> 
+                    <img class="logofb" src="img/d9dc614c-43ff-40db-b492-38e489afdd7e.jpg" alt="logo facebook">
+                </a>
+                <a href="https://www.instagram.com/leo_michielin/?hl=fr">
+                    <img class="logoinsta" src="img/d2e137d5-ac9d-462d-b8b7-bcc132eb449c.jpg" alt="logo instagram">
+
+                </a>
+                <br>
+                <br>
+                <br>
+            </div>
+        </main>
+        <footer>
+            <img class="Tailleimg1" src="img/downloadfile.bin">
+            <img class="Tailleimg1" src="img/downloadfile.bin">
+            <div id="qsn">
+                <img class="Tailleimg1" src="img/downloadfile.bin">
+                <button id="spé" onclick="goto(5)">QUI SOMMES NOUS ?</button>
+            </div>
+            <img class="Tailleimg1" src="img/downloadfile.bin">
+            <img class="Tailleimg1" src="img/downloadfile.bin">
+        </footer>
+    </body>
+    <script>
+        var coutotal;
+        var list=[
+            accueil = document.getElementById("contenu1"),
+            beer = document.getElementById("contenu2"),
+            panier = document.getElementById("contenu3"),
+            inscrit = document.getElementById("contenu4"),
+            quantit = document.getElementById("contenu5"),
+            pers = document.getElementById("contenu6")
+        ];
+        var list2=[""];
+        var list3=[];
+        var listusers=[];
+        var listform=[];
+        var listcmd=[];
+
+        document.getElementById("commandes").style.display = "none";
+        document.getElementById("butcom").disabled = true;
+
+        for(i=0;i<list.length;i++){
+            if (list[i]==list[0]){
+                list[i].style.display = "block";
+            }else{
+                list[i].style.display = "none";
+            }
+        }
+
+        document.getElementById("valider").addEventListener("click", () =>{
+            if(document.getElementById("quant").value<=0){
+                alert("La quantité d'objet doit être supérieure à 0 articles !");
+                document.getElementById("quant").value = "";
+            }else{
+                ajout(list2,list3);
+            }
+        });
+
+        document.getElementById("supression").addEventListener("click",() => {
+            supprimer(coutotal);
+        });
+
+        document.getElementById("supcpt").addEventListener("click",() => {
+            supcompte(listusers);
+        });
+
+        function affichercompte(){
+            document.getElementById("supcompte").style.display = "block";
+        }
+
+        function affichercommande(){
+            document.getElementById("commandes").style.display = "block";
+        }
+
+        function supcompte(l){
+            var h=0;
+            var f=0;
+            var cpt = document.getElementById("cptasupprimer").value;
+            while (f != listusers.length){
+                document.getElementById("user_selection").remove("option");
+                f++;
+            }
+            for (n=0;n<l.length;n++){
+                if (cpt == l[n][0]){
+                    l.splice(n,1);
+                    h++;
+                    alert("Compte supprimé !");
+                }
+            }
+            if (h==0){
+                alert("Le compte n'existe pas ou a mal été renseigné (insérer le prénom de l'utilisateur du compte)");
+            }
+            f=0;
+            while (f != listusers.length){
+                OP = document.createElement("option");
+                TXT4 = document.createTextNode(listusers[f][0]);
+                OP.appendChild(TXT4);
+                document.getElementById("user_selection").appendChild(OP);
+                f++;
+            }
+            document.getElementById("supcompte").style.display = "none";
+            document.getElementById("cptasupprimer").value = "";
+        }
+
+        function goto(i){
+            for(j=0;j<list.length;j++){
+                if (list[j]==list[i]){
+                    list[j].style.display = "block";
+                }else{
+                    list[j].style.display = "none";
+                }
+            }
+            document.getElementById("supr").style.display = "none";
+            document.getElementById("supcompte").style.display = "none";
+        }
+
+        function quant(i,k,l){
+            for(j=0;j<list.length;j++){
+                if (list[j]==list[i]){
+                    list[j].style.display = "block";
+                }else{
+                    list[j].style.display = "none";
+                }
+            }
+            list2[0]=k;
+            list2[1]=l;
+        }
+
+        function anulcpt(){
+            document.getElementById("supcompte").style.display = "none";
+        }
+
+        function anulsupr(){
+            document.getElementById("supr").style.display = "none";
+        }
+
+        function supprimer(coutotal){
+            var f=0;
+            var h=0;
+            var elemsup = parseInt(document.getElementById("supselect").value);
+            console.log(listcmd);
+            //console.log(elemsup);
+            //console.log(listcmd.length);
+            while (f != listcmd.length){
+                document.getElementById("supselect").remove("option");
+                f++;
+            }
+            f = 1;
+            if (elemsup == listcmd.length){
+                document.getElementById("tableadd").deleteRow(-1);
+                listcmd.splice((listcmd.length)-1,1);
+            }else {
+                while (h == 0){
+                    if (f == elemsup){
+                        document.getElementById("tableadd").deleteRow(f);
+                        listcmd.splice(f-1,1);
+                        h++;
+                    }
+                    f++;
+                }
+            }
+            f=elemsup-1;
+            while(f!=listcmd.length){
+                listcmd[f][3]= f+1;
+                f++;
+            }
+            f=0;
+            while(f!=listcmd.length){
+                OP = document.createElement("option");
+                TXT4 = document.createTextNode(listcmd[f][3]);
+                OP.appendChild(TXT4);
+                document.getElementById("supselect").appendChild(OP);
+                f++;
+            }
+            if (listcmd.length == 0){
+                document.getElementById("butcom").disabled = true;
+            }
+            coutotal = coutotal - list3[elemsup-1];
+            list3.splice(elemsup-1,1);
+            document.getElementById("coutotal").innerText = "";
+            document.getElementById("coutotal").innerText = coutotal;
+            //console.log(listcmd);
+            document.getElementById("supr").style.display = "none";
+        }
+
+        function supall(){
+            var f=0;
+            while (f != listcmd.length){
+                document.getElementById("supselect").remove("option");
+                f++;
+            }
+            f=0
+            while(listcmd.length != 0){
+                if (f == listcmd.length){
+                    document.getElementById("tableadd").deleteRow(-1);
+                    listcmd.splice((listcmd.length)-1,1);
+                }else{
+                    document.getElementById("tableadd").deleteRow(f+1);
+                    listcmd.splice(f,1);
+                }
+            }
+            if (list3.lenght != 0){
+                list3.splice(0,list3.length);
+            }
+        }
+
+        function affichersup(){
+            document.getElementById("supr").style.display = "block";
+        }
+
+        function clearinput(){
+            document.getElementById("quant").value = "";
+            goto(1);
+        }
+
+        function ajout(j,k){
+            var n = 0;
+            TR = document.createElement("tr");
+
+            listcmd.push([]);
+
+            var titre = document.getElementById(j[0]).innerText;
+            TD1 = document.createElement("td");
+            TXT1 = document.createTextNode(titre);
+            TD1.appendChild(TXT1);
+            TR.appendChild(TD1);
+            listcmd[(listcmd.length)-1].push(titre);
+            
+            var quantité = document.getElementById("quant").value;
+            TD2 = document.createElement("td");
+            TXT2 = document.createTextNode(quantité);
+            TD2.appendChild(TXT2);
+            TR.appendChild(TD2);
+            listcmd[(listcmd.length)-1].push(quantité);
+
+            var prixunit = document.getElementById(j[1]).innerText;
+            var prix = quantité * prixunit;
+            prix = Math.round(prix*100)/100;
+            TD3 = document.createElement("td");
+            TXT3 = document.createTextNode(prix);
+            TD3.appendChild(TXT3);
+            TR.appendChild(TD3);
+            listcmd[(listcmd.length)-1].push(prix);
+
+            while (n!=listcmd.length){
+                n++;
+            }
+            listcmd[(listcmd.length)-1].push(n);
+
+            OP = document.createElement("option");
+            TXT4 = document.createTextNode(listcmd[(listcmd.length)-1][3]);
+            OP.appendChild(TXT4);
+            document.getElementById("supselect").appendChild(OP);
+
+            document.getElementById("tableadd").appendChild(TR);
+            alert("articles enregistrés au panier");
+            
+            document.getElementById("coutotal").innerText = "";
+            k.push(prix);
+            coutotal = 0;
+            for(a=0;a<k.length;a++){
+                coutotal = coutotal + k[a];
+            }
+            document.getElementById("coutotal").innerText = coutotal;
+            
+            document.getElementById("butcom").disabled = false;
+
+            clearinput();
+
+            //console.log(listcmd);
+        }
+
+        function enregistrerform(){
+            var compt=0;
+            var name = document.getElementById("user_name").value;
+            var surname = document.getElementById("user_surname").value;
+            var naissance = document.getElementById("user_date").value;
+            var mail = document.getElementById("user_mail").value;
+            var num = document.getElementById("user_num").value;
+
+            date = new Date;
+            annee= date.getFullYear();
+            moi = date.getMonth();
+            jour = date.getDate();
+
+            mois = moi + 1;
+
+            annee_nais = parseInt(naissance[0] + naissance[1] + naissance[2] + naissance[3]);
+            mois_nais = parseInt(naissance[5] + naissance[6]);
+            jour_nais = parseInt(naissance[8] + naissance[9]);
+
+            ecart_annee = annee - annee_nais;
+            ecart_mois = mois - mois_nais;
+            ecart_jour = jour - jour_nais;
+
+            if (ecart_annee < 18){
+                alert("L'age minimum requis est 18 ans");
+                return;
+            }
+            else if (ecart_annee == 18){
+                if (ecart_mois < 0){
+                    alert("L'age minimum requis est 18 ans");
+                    return;
+                }
+                else if (ecart_mois == 0){
+                    if (ecart_jour < 0){
+                        alert("L'age minimum requis est 18 ans");
+                        return;
+                    }
+                }
+            }
+
+            if (name == ""){
+                alert("Insérer un prénom valide");
+                return;
+            }
+            if (surname == ""){
+                alert("Insérer un nom valide");
+                return;
+            }
+            if (naissance == ""){
+                alert("Insérer votre date de naissance");
+                return;
+            }
+            for (n=0;n<mail.length;n++){
+                if (mail[n]=="@"){
+                    compt++;
+                }
+            }
+            if (mail == "" || compt == 0){
+                alert("Insérer un e-mail valide (avec un @)");
+                return;
+            }
+
+            listform.push(name);
+            listform.push(surname);
+            listform.push(date);
+            listform.push(mail);
+            listform.push(num);
+
+            listusers.push([]);
+            for(n=0;n<listform.length;n++){
+                listusers[(listusers.length)-1].push(listform[n]);
+            };
+            listform.splice(0,listform.length);
+
+            //console.log(listusers);
+
+            alert("Informations enregistrées");
+
+            select_users();
+        }
+
+        function select_users(){
+            var g = (listusers.length)-1;
+            while(g!=0){
+                document.getElementById("user_selection").remove("option");
+                g--;
+            }
+            for(n=0;n<listusers.length;n++){
+                OP = document.createElement("option");
+                TXT = document.createTextNode(listusers[n][0]);
+                OP.appendChild(TXT);
+                document.getElementById("user_selection").appendChild(OP);
+            }
+        }
+
+        function ajoutcom(){
+            if(!listusers[0]){
+                alert("Créer un compte avant de commander");
+                goto(3);
+            }
+            else{
+                var utilisateur = document.getElementById("user_selection").value;
+                //console.log(listusers[0][0]);
+                //console.log(utilisateur);
+                for(n=0;n<listusers.length;n++){
+                    if(listusers[n][0]==utilisateur){
+
+                        //console.log(listusers);
+
+                        TR = document.createElement("tr");
+
+                        var prenom = listusers[n][0];
+                        TD1 = document.createElement("td");
+                        TXT1 = document.createTextNode(prenom);
+                        TD1.appendChild(TXT1);
+                        TR.appendChild(TD1);
+
+                        var nom = listusers[n][1];
+                        TD2 = document.createElement("td");
+                        TXT2 = document.createTextNode(nom);
+                        TD2.appendChild(TXT2);
+                        TR.appendChild(TD2);
+
+                        var naissance = listusers[n][2];
+                        TD3 = document.createElement("td");
+                        TXT3 = document.createTextNode(naissance);
+                        TD3.appendChild(TXT3);
+                        TR.appendChild(TD3);
+
+                        var email = listusers[n][3];
+                        TD4 = document.createElement("td");
+                        TXT4 = document.createTextNode(email);
+                        TD4.appendChild(TXT4);
+                        TR.appendChild(TD4);
+
+                        if(listusers[n][4]==""){
+                            var num = "Non renseigné";
+                            TD5 = document.createElement("td");
+                            TXT5 = document.createTextNode(num);
+                            TD5.appendChild(TXT5);
+                            TR.appendChild(TD5);
+                        }else{
+                            var num = listusers[n][4];
+                            TD5 = document.createElement("td");
+                            TXT5 = document.createTextNode(num);
+                            TD5.appendChild(TXT5);
+                            TR.appendChild(TD5);
+                        }
+                        
+                        TD6 = document.createElement("td");
+                        TXT6 = document.createTextNode(document.getElementById("coutotal").innerText + "€");
+                        TD6.appendChild(TXT6);
+                        TR.appendChild(TD6);
+
+                        document.getElementById("ajoutcom").appendChild(TR);
+                        document.getElementById("butcom").disabled = true;
+
+                        alert("Commande ajoutée");
+
+                        affichercommande();
+
+                        supall();
+                    }
+                }
+            }
+        }
+
+    </script>
+</html>
